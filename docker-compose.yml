@@ -1,17 +1,16 @@
-version: '3'
 services:
   app1:
     build: ./app1
     ports:
-    - "5000:3000"
+    - "5001:3000"
   app2:
     build: ./app2
     ports:
-    - "5001:3000"
+    - "5002:3000"
   nginx:
     build: ./nginx 
     ports:
-    - "80:80"
+    - "8080:80"
     depends_on:
       - app1
       - app2
